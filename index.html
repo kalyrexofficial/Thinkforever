@@ -1,51 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelyrex Idea Hub</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Kelyrex Idea Hub</h1>
-            <div id="auth-section">
-                <button id="login-btn">Login to Post</button>
-            </div>
-        </header>
+<!-- Remove these sections: -->
+<!-- Delete the entire auth-section div -->
+<div id="auth-section">
+    <button id="login-btn">Login to Post</button>
+</div>
 
-        <div id="login-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Login</h2>
-                <form id="login-form">
-                    <input type="text" id="username" placeholder="Username" required>
-                    <input type="password" id="password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                    <p id="login-error" class="error-message"></p>
-                </form>
-            </div>
-        </div>
+<!-- Delete the entire login modal -->
+<div id="login-modal" class="modal">
+    [...]
+</div>
 
-        <div id="post-idea-section" class="hidden">
-            <h2>Share Your Idea</h2>
-            <form id="idea-form">
-                <input type="text" id="idea-title" placeholder="Idea Title" required>
-                <textarea id="idea-content" placeholder="Describe your idea..." required></textarea>
-                <button type="submit">Post Idea</button>
-            </form>
-        </div>
-
-        <main>
-            <h2>Recent Ideas</h2>
-            <div id="ideas-container">
-                <!-- Ideas will be loaded here -->
-            </div>
-        </main>
-    </div>
-
-    <script src="auth.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+<!-- Change the post section to always show -->
+<div id="post-idea-section">
+    [...]
+</div>
