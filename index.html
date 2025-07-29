@@ -1,17 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Ideas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelyrex Idea Hub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Welcome to My Idea Page</h1>
-  <p>Write your ideas here!</p>
+    <div class="container">
+        <header>
+            <h1>Kelyrex Idea Hub</h1>
+            <div id="auth-section">
+                <button id="login-btn">Login to Post</button>
+            </div>
+        </header>
 
-  <h2>Idea 1</h2>
-  <p>I want to create a smart mirror with AI voice assistant.</p>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p id="login-error" class="error-message"></p>
+                </form>
+            </div>
+        </div>
 
-  <h2>Idea 2</h2>
-  <p>An app that gives business ideas daily based on user mood.</p>
+        <div id="post-idea-section" class="hidden">
+            <h2>Share Your Idea</h2>
+            <form id="idea-form">
+                <input type="text" id="idea-title" placeholder="Idea Title" required>
+                <textarea id="idea-content" placeholder="Describe your idea..." required></textarea>
+                <button type="submit">Post Idea</button>
+            </form>
+        </div>
 
+        <main>
+            <h2>Recent Ideas</h2>
+            <div id="ideas-container">
+                <!-- Ideas will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
